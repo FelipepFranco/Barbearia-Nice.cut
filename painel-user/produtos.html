@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--ICONES-->
+    <link rel="stylesheet" href="assets/icomoon/style.css">
+
+    <!--SWIPER JS-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!--STYLES-->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!--FONTES-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Produtos</title>
+</head>
+<body>
+
+    <header id="header">
+        <nav class="container ">
+            <a class="logo" href="#">
+                <h1 class="inverter-cor">Nice.</h1> <span class="be-logo">.Cut</span></a>
+            <!-- MENU -->
+            <div class="menu">
+                <ul class="grid">
+                    <li><a class="title" href="index.html#home">Início</a></li>
+                    <li><a class="title" href="index.html#about">Sobre</a></li>
+                    <li><a class="title" href="index.html#services">Serviços</a></li>
+                    <li><a class="title" href="index.html#testimonials">Feedback</a></li>
+                    <li><a class="title" href="index.html#contact">Contatos</a></li>
+                    <li><a class="title" href="#">Produtos</a></li>
+                </ul>
+            </div>
+            <div class="toggle icon-menu"></div>
+            <div class="toggle icon-close"></div>
+            <!-- /MENU -->
+
+
+        </nav>
+    </header>
+
+    <main class="body">
+        <div class="content">
+            <button class="arrow-left control" aria-label="Previous Image"> <img style="width: 30px ;" src="https://pic.onlinewebfonts.com/svg/img_296246.png" alt=""> </button>
+            <button class="arrow-right control" aria-label="Next Image"> <img style="width: 30px ; rotate: 180deg;" src="https://pic.onlinewebfonts.com/svg/img_296246.png" alt="">  </button>
+            <div class="gallery-wrapper">
+                <div class="gallery">
+                    <img src="assets/images/vendas/creme-esfoliante.webp" alt="" class="item current-item" >
+                    <img src="assets/images/vendas/creme.webp" alt="" class="item current-item"> 
+                    <img src="assets/images/vendas/oleo.webp" alt="" class="item current-item">
+                    <img src="assets/images/vendas/pomada.jpg" alt=""class="item current-item">
+                    <img src="assets/images/vendas/pos-barba.webp" alt=""class="item current-item">
+                </div>
+            </div>
+            
+        </div>
+        
+    </main>
+     <!--FOOTER-->
+     <footer class="section pro">
+
+      <div class="container grid">
+          <div class="brand">
+              <a class="logo logo-alt" href="#home">
+                  <h1 class="inverter-cor">Nice.</h1> <span>.Cut</span></a>
+              </a>
+              <p>©2021 NiceCut.</p>
+              <p>Todos os direitos reservados.</p>
+          </div>
+          <div class="text">
+  
+            <a href="https://api.whatsapp.com/send?phone=+5511999999999 754&text=Olá, gostaria de saber  mais sobre os produtos.." target="_blank" class="button2"><i class="icon-whatsapp"> Peça já o seu!</i></a>
+        </div>
+          <div class="social grid">
+              <a href="https://www.instagram.com" target="_blank">
+                  <i class="icon-instagram"></i></a>
+              <a href="https://www.facebook.com" target="_blank">
+                  <i class="icon-facebook"></i></a>
+              <a href="https://www.youtube.com" target="_blank">
+                  <i class="icon-youtube"></i></a>
+
+          </div>
+      </div>
+
+  </footer>
+
+
+
+    <!--main.js-->
+    <script src="main.js"></script>
+    <script>
+        const controls = document.querySelectorAll(".control");
+        let currentItem = 0;
+        const items = document.querySelectorAll(".item");
+        const maxItems = items.length;
+
+        let idx = 0;
+
+        function carrossel(){
+            currentItem ++
+            
+            if(currentItem >= maxItems ){
+              
+              currentItem = 0
+            }
+            items.forEach((item) => item.classList.remove("current-item"));
+        
+            items[currentItem].scrollIntoView({
+              behavior: "smooth",
+              inline: "center"
+            });
+        
+            items[currentItem].classList.add("current-item");
+        }
+        
+        setInterval(carrossel,2800);
+
+
+
+
+
+        controls.forEach((control) => {
+          control.addEventListener("click", (e) => {
+            isLeft = e.target.classList.contains("arrow-left");
+        
+            if (isLeft) {
+              currentItem -= 1;
+            } else {
+              currentItem += 1;
+            }
+        
+            if (currentItem >= maxItems) {
+              currentItem = 0;
+            }
+        
+            if (currentItem < 0) {
+              currentItem = maxItems - 1;
+            }
+        
+            items.forEach((item) => item.classList.remove("current-item"));
+        
+            items[currentItem].scrollIntoView({
+              behavior: "smooth",
+              inline: "center"
+            });
+        
+            items[currentItem].classList.add("current-item");
+          });
+        });
+
+        </script>
+</body>
+</html>

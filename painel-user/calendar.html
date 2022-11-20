@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--PAGE INFO-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nice Cut</title>
+
+
+    <!--ICONES-->
+    <link rel="stylesheet" href="assets/icomoon/style.css">
+
+    <!--SWIPER JS-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!--STYLES-->
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calendar.css">
+
+    <!--FONTES-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!--HTML-->
+
+</head>
+
+<body>
+    <header id="header">
+        <nav class="container ">
+            <a class="logo" href="#">
+                <h1 class="inverter-cor">Nice.</h1> <span class="be-logo">.Cut</span></a>
+            <!-- MENU -->
+            <div class="menu">
+                <ul class="grid">
+                    <li><a class="title" href="#home">Início</a></li>
+                    <li><a class="title" href="#about">Sobre</a></li>
+                    <li><a class="title" href="#services">Serviços</a></li>
+                    <li><a class="title" href="#testimonials">Feedback</a></li>
+                    <li><a class="title" href="#contact">Contatos</a></li>
+                    <li><a class="title" href="produtos.html">Produtos</a></li>
+                    
+               
+                    <li><a class=" title dropdown-item" href="../index .html">Sair</a></li>
+                </ul>
+            </div>
+            <div class="toggle icon-menu"></div>
+            <div class="toggle icon-close"></div>
+            <!-- /MENU -->
+
+
+        </nav>
+    </header>
+
+    <main>
+        
+
+        <!--HOME-->
+        <div class="section" id="home">
+            <div class="container grid ">
+
+                <h1>Escolha uma data, <span>e o profissional</span></h1>
+                <!--
+                TO DO:
+                1. Add icons to List 
+                2. Toogle opened state
+                -->
+                <form action="marcado.html">
+                <input type="date" name="data" id="agenda" class="form">
+                
+           
+                <select id="horario" class="form">
+                    <option value="hide">-- horario --</option>
+                    <option value="10:00">10:00</option>
+                    <option value="11:00">11:00</option>
+                    <option value="13:30">13:30</option>
+                    <option value="16:00">16:00</option>
+                </select>
+                
+                <select id="year" class="form">
+                    <option value="hide">-- Barbeiro --</option>
+                    <option value="Leandro">Leandro</option>
+                    <option value="Marcos">Marcos</option>
+                    <option value="Lucas">Lucas</option>
+                    <option value="Sandro">Sandro</option>
+                </select>
+                <br>
+                <br>
+                <br>
+
+                <button type="submit">Agendar</button>
+
+                </form>
+                
+            </div>
+        </div>
+        <!--/HOME-->
+
+        <div class="divider-1"></div>
+
+
+        <!--CONTACTS-->
+        <div class="section" id="contact">
+            <div class="container grid">
+
+                <div class="text">
+                    <h2 class="title">Entre em contato com a gente!</h2>
+                    <p>Entre em contato com a NiceCut, queremos tirar suas dúvidas, ouvir suas críticas e sugestões.</p>
+                    <a href="https://api.whatsapp.com/send?phone=+5511999999999 754&text=Olá, gostaria de saber  mais sobre os produtos.." target="_blank" class="button"><i class="icon-whatsapp"> Entrar em contato</i></a>
+                </div>
+               
+
+                <div class="links">
+                    <ul class="grid">
+
+                        <li><i class="icon-whatsapp"></i> 11 99999-9999 </li>
+
+                        <li>
+                            <i class="icon-map-pin"></i> R. Amaurir Sousa, 346
+                        </li>
+                        <li><i class="icon-mail"></i> contato@nicecut.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <!--/CONTACTS-->
+
+        <div class="divider-footer"></div>
+
+      
+    </main>
+
+    <!--FOOTER-->
+    <footer class="section">
+
+        <div class="container grid">
+            <div class="brand">
+                <a class="logo logo-alt" href="#home">
+                    <h1 class="inverter-cor">Nice.</h1> <span>.Cut</span></a>
+                </a>
+                <p>©2021 NiceCut.</p>
+                <p>Todos os direitos reservados.</p>
+            </div>
+            <div class="social grid">
+                <a href="https://www.instagram.com" target="_blank">
+                    <i class="icon-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="icon-facebook"></i></a>
+                <a href="https://www.youtube.com" target="_blank">
+                    <i class="icon-youtube"></i></a>
+
+            </div>
+        </div>
+
+
+    </footer>
+
+    <a href="#home" class="back-to-top"><i class="icon-north"></i></a>
+
+    <!--SWIPER JS-->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!--Scrollreveal -->
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--main.js-->
+    <script src="main.js"></script>
+   
+</body>
+
+</html>
